@@ -5,7 +5,7 @@ var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var specialChar = ['@', '#', '$', '%', '^', '&', '*', '!', '?'];
 var passwordLength = [];
 var userSelection = [];
-var characterToUse= [];
+var charactersToUse= [];
 
 
 
@@ -76,22 +76,19 @@ var password="";
 //WHILE password.length<passwordLength
 while( password.length< passwordLength){
 
-  var randomCharacter=userSelection[Math.floor(Math.random())*userSelection.length];
+  var charactersToUse=userSelection[Math.floor(Math.random())*userSelection.length];
 
-  password+=randomCharacter
+  
 
 
 }
-//function writePassword(){
+function writePassword(){
 
 
-//var password= generatePassword();
-//var passwordText= document.querySelector("#password");
+var password= generatePassword();
+var passwordText= document.querySelector("#password");
 
-//passwordText.value = password;
-
-
-
+passwordText.value = password;
 
 
 
@@ -107,6 +104,12 @@ while( password.length< passwordLength){
 
 
 
+
+
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
+
+
+
